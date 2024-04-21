@@ -16,11 +16,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Remove proxies
-        run: npm config delete proxy
-
       - name: Install Dependencies
-        run: npm install
+        run: npm ci --verbose
 
       - name: Build
         run: npm run build
